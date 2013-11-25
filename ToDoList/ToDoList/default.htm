@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ToDo List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="todolist.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-body" id="content">
+                        <h3 class="text-center">
+                           ToDo List
+                        </h3>   
+                        <textarea class="form-control counted" name="message" placeholder="Write your todo.." rows="3" style="margin-bottom:10px;" id="textarea"></textarea>
+                        <button class="btn btn-info" type="submit" onclick="addNewToDo()">Add new ToDo</button>
+                        <button class="btn btn-info pull-right" type="submit" onclick="clearChecked()">clear checked</button>
+                        <table class="table" id="table">  
+                           <tbody id="tbody">
+                           </tbody>                     
+                        </table>                                                                                                  
+                    </div>              
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
