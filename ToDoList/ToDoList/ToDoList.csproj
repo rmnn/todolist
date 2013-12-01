@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <ProjectGuid>{4CAAC15B-4511-4366-9E00-8EE4530E8A87}</ProjectGuid>
+    <ProjectGuid>{8D830CF1-9020-4F5B-8EF6-94261878AF80}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <OutputPath>bin</OutputPath>
@@ -16,24 +16,21 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app.css" />
+    <Content Include="app\css\bootstrap.css" />
+    <Content Include="app\lib\jquery.js" />
+    <Content Include="app\lib\require.js" />
     <Content Include="default.htm" />
-    <Content Include="dist\css\bootstrap-theme.css" />
-    <Content Include="dist\css\bootstrap-theme.min.css" />
-    <Content Include="dist\css\bootstrap.css" />
-    <Content Include="dist\css\bootstrap.min.css" />
-    <Content Include="dist\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="dist\js\bootstrap.js" />
-    <Content Include="dist\js\bootstrap.min.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="todolist.ts" />
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="app\AppConfig.ts" />
+    <TypeScriptCompile Include="app\AppMain.ts" />
+    <TypeScriptCompile Include="app\classes\Todo.ts" />
+    <TypeScriptCompile Include="app\modules\jquery.d.ts" />
+    <TypeScriptCompile Include="app\modules\require.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dist\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="dist\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="dist\fonts\glyphicons-halflings-regular.woff" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -41,6 +38,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -56,9 +54,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>57840</DevelopmentServerPort>
+          <DevelopmentServerPort>59992</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:57840/</IISUrl>
+          <IISUrl>http://localhost:59992/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

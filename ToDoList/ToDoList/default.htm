@@ -2,10 +2,9 @@
 <html>
 <head>
     <title>ToDo List</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet" />
-    <script src="todolist.js"></script>
+    <link href="app/css/bootstrap.css" rel="stylesheet" />
+    <script data-main="app/AppConfig" type="text/javascript" src="../app/lib/require.js"></script>
+    <script data-main="app/AppConfig" type="text/javascript" src="../app/lib/jquery.js"></script>
 </head>
 <body>
     <div class="container">
@@ -14,16 +13,17 @@
                 <div class="panel panel-default">
                     <div class="panel-body" id="content">
                         <h3 class="text-center">
-                           ToDo List
-                        </h3>   
-                        <textarea class="form-control counted" name="message" placeholder="Write your todo.." rows="3" style="margin-bottom:10px;" id="textarea"></textarea>
-                        <button class="btn btn-info" type="submit" onclick="addNewToDo()">Add new ToDo</button>
-                        <button class="btn btn-info pull-right" type="submit" onclick="clearChecked()">clear checked</button>
-                        <table class="table" id="table">  
-                           <tbody id="tbody">
-                           </tbody>                     
-                        </table>                                                                                                  
-                    </div>              
+                            Todos
+                        </h3>
+                        <form>
+                            <input type="text" />
+                            <button type="button" class="btn btn-primary pull-right btn-xs" id="clear">clear checked</button>                        
+                            <table class="table" id="table">
+                                <tbody></tbody>
+                            </table>  
+                            <small class="text-muted pull-right" id="remaining">0 remaining</small>        
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
