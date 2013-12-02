@@ -21,19 +21,10 @@ define(["require", "exports", "classes/Todo"], function(require, exports, __gt__
                 $('table tr td input:checkbox').each(function () {
                     if ($(this).is(':checked')) {
                         $(this).parent().parent().remove();
+                        var all = $('input:checkbox:not(:checked)').length;
+                        $('#remaining').text(all.toString() + " remaining");
                     }
                 });
-                $('#remaining').text("0 remaining");
-            });
-
-            $('table').change(function () {
-                var cnt = 0;
-                $('table tr td input:checkbox').each(function () {
-                    if ($(this).is(':checked')) {
-                        cnt++;
-                    }
-                });
-                $('#remaining').text(cnt.toString() + " remaining");
             });
         };
         return AppMain;
